@@ -1,9 +1,0 @@
-logging server 172.16.192.15
-
-!
-
-snmp-server community cisco RO
-snmp-server location nexus
-snmp-server contact doda@doda.com
-snmp-server user cisco network-operator
-snmp-server host 172.16.192.15 traps version 2
