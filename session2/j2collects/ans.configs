@@ -1,0 +1,19 @@
+#!/usr/bin/env ansible-playbook
+#using j2 template for individual plays on iso and nxos
+- hosts: ios
+  connection: local
+  gather_facts: no 
+  tasks:
+  - template: src=ios/common.j2
+              dest=configs/{{inventory_hostname}}.txt
+    name: create configuration for ios devices 
+
+
+- hosts: nxos 
+  connection: local
+  gather_facts: no
+  tasks:
+  - template: src=nxos/common.j2
+              dest=configs/{{inventory_hostname}}.txt
+    name: create configuration for nxos devices
+

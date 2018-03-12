@@ -1,0 +1,9 @@
+logging host 172.16.192.15
+
+!
+
+snmp-server community cisco RO
+snmp-server location router1
+snmp-server contact doda@doda.com
+snmp-server chassis id
+snmp-server host 172.16.192.15 cisco
